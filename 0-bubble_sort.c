@@ -7,12 +7,12 @@
   * @size: THe length of the aaray.
   * Return: Nothing.
   */
-void bubble_sort(int *array, size_t size);
+void bubble_sort(int *array, size_t size)
 {
 	size_t i = 0, j = 0;
-	int mim = 0;
+	int bob = 0;
 
-	if (array == NULL || size = 0)
+	if (array == NULL || size == 0)
 		return;
 	for (; i < size - 1; i++)
 	{
@@ -20,9 +20,9 @@ void bubble_sort(int *array, size_t size);
 		{
 			if (array[j] > array[j + 1])
 			{
-				aux = array[j + 1];
+				bob = array[j + 1];
 				array[j + 1] = array[j];
-				array[j] = aux;
+				array[j] = bob;
 				print_array(array, size);
 			}
 		}
