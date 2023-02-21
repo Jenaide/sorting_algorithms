@@ -26,7 +26,7 @@ void quick_sort(int *array, size_t size)
 int partition(int *array, int lo, int hi, size_t size)
 {
 	int i = lo - 1, j = lo;
-	int pivot = array[hi], aux = 0;
+	int pivot = array[hi], mim = 0;
 
 	for (; j < hi; j++)
 	{
@@ -35,18 +35,18 @@ int partition(int *array, int lo, int hi, size_t size)
 			i++;
 			if (array[i] != array[j])
 			{
-				aux = array[i];
+				mim = array[i];
 				array[i] = array[j];
-				array[j] = aux;
+				array[j] = mim;
 				print_array(array, size);
 			}
 		}
 	}
 	if (array[i + 1] != array[hi])
 	{
-		aux = array[i + 1];
+		mim = array[i + 1];
 		array[i + 1] = array[hi];
-		array[hi] = aux;
+		array[hi] = mim;
 		print_array(array, size);
 	}
 	return (i + 1);
